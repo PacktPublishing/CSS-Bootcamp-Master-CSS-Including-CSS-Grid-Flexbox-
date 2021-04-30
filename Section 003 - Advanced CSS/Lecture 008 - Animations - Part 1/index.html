@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animations</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            position: relative;
+            animation-name: anim;
+            animation-duration: 4s;
+        }
+
+        @keyframes anim {
+            0% {
+                left: 0;
+                top: 0;
+                background-color: orangered;
+            }
+            25% {
+                left: 500px;
+                top: 0;
+                background-color: green;
+            }
+            50% {
+                left: 500px;
+                top: 500px;
+                background-color: goldenrod;
+            }
+            75% {
+                left: 0;
+                top: 500px;
+                background-color: royalblue;
+            }
+            100% {
+                left: 0;
+                top: 0;
+                background-color: orangered;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="box"></div>
+
+</body>
+</html>
+
+
+
+
+

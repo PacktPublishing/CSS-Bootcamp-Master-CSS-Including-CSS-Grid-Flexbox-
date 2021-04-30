@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: #efefef;
+            margin: auto;
+            display: grid;
+            grid-template-rows: [header-start] 1fr [header-end main-start] 1fr 1fr [main-end box-start] 1fr [box-end footer-start] 1fr [footer-end];
+            grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+            grid-gap: 1rem;
+        }
+
+        .container div {
+            background-color: royalblue;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .header {
+            grid-column: col-start 1 / col-end -1;
+            grid-row: header-start / header-end;
+        }
+
+        .sidebar {
+            grid-column: col-start 1 / col-end 1;
+            grid-row: main-start / box-end;
+        }
+
+        .main {
+            grid-column: col-start 2 / col-end -1;
+            grid-row: main-start / main-end;
+        }
+
+        .box-1 {
+            grid-column: col-start 2 / col-end 2;
+            grid-row: box-start / box-end;
+        }
+
+        .box-2 {
+            grid-column: col-start 3 / col-end 3;
+            grid-row: box-start / box-end;
+        }
+
+        .box-3 {
+            grid-column: col-start 4 / col-end -1;
+            grid-row: box-start / box-end;
+        }
+
+        .footer {
+            grid-column: col-start 1 / col-end -1;
+            grid-row: footer-start / footer-end;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main</div>
+        <div class="box-1">Box 1</div>
+        <div class="box-2">Box 2</div>
+        <div class="box-3">Box 3</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

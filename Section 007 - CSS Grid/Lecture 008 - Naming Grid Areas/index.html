@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: #efefef;
+            margin: auto;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header ."
+                                 "sidebar main main main"
+                                 "sidebar main main main"
+                                 "sidebar box-1 box-2 box-3"
+                                 "footer footer footer footer";
+            grid-gap: 1rem;
+        }
+
+        .container div {
+            background-color: royalblue;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .box-1 {
+            grid-area: box-1;
+        }
+
+        .box-2 {
+            grid-area: box-2;
+        }
+
+        .box-3 {
+            grid-area: box-3;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main</div>
+        <div class="box-1">Box 1</div>
+        <div class="box-2">Box 2</div>
+        <div class="box-3">Box 3</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

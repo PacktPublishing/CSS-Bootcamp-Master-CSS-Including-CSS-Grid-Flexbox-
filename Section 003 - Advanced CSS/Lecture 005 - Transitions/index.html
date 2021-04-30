@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transitions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            /* transition-property: width; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 1s; */
+            /* transition-timing-function: cubic-bezier(.02,.97,.67,.32); */
+            transition: all 1s;
+        }
+
+        .box:hover {
+            width: 400px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="box"></div>
+
+</body>
+</html>
+
+
+
+
+
